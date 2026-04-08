@@ -11,7 +11,7 @@
     <groupId>com.example</groupId>       <!-- Your organization or package name -->
     <artifactId>my-app</artifactId>      <!-- Project name -->
     <version>1.0.0</version>             <!-- Project version -->
-    <packaging>war</packaging>           <!-- jar, war, pom, etc. -->
+    <packaging>jar</packaging>           <!-- jar, war, pom, etc. -->
 
     <!-- Project metadata -->
     <name>My Java App</name>
