@@ -1,68 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <!-- Maven model version -->
+    <!-- POM model version -->
     <modelVersion>4.0.0</modelVersion>
 
     <!-- Project coordinates -->
-    <groupId>com.example</groupId>
-    <artifactId>my-app</artifactId>
-    <version>1.0.0</version>
-    <packaging>jar</packaging>
+    <groupId>com.example</groupId>       <!-- Your organization or package name -->
+    <artifactId>my-app</artifactId>      <!-- Project name -->
+    <version>1.0.0</version>             <!-- Project version -->
+    <packaging>war</packaging>           <!-- jar, war, pom, etc. -->
 
     <!-- Project metadata -->
-    <name>My Sample Maven App</name>
-    <description>A simple Maven project example</description>
+    <name>My Java App</name>
+    <description>A simple Maven Java application</description>
     <url>https://example.com/my-app</url>
-
-    <!-- Properties -->
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
     <!-- Dependencies -->
     <dependencies>
-        <!-- JUnit for testing -->
+        <!-- Example: JUnit for testing -->
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.10.2</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
             <scope>test</scope>
-        </dependency>
-
-        <!-- Lombok for reducing boilerplate code -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.32</version>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 
     <!-- Build configuration -->
     <build>
         <plugins>
-            <!-- Compiler plugin -->
+            <!-- Compiler plugin to set Java version -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
+                    <source>17</source>   <!-- Java source version -->
+                    <target>17</target>   <!-- Java target version -->
                 </configuration>
-            </plugin>
-
-            <!-- Surefire plugin for running tests -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.2.5</version>
             </plugin>
         </plugins>
     </build>
